@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+      body{
+          display: flex;
+          background-color: black;
+      }
+        .sun{
+            width: 100px;
+            height: 100px;;
+            background-color: orange;
+            border-radius: 50%;
+            position: absolute;
+            margin-top: 300px;
+            margin-left: 40%;
+
+        }
+        .mercury{
+            --moveX:180px;
+            width: 20px;
+            height: 20px;;
+            background-color: grey;
+            border-radius: 50%;
+            position: absolute;
+            margin-top: 300px;
+            margin-left: 40%;   
+            transform: translate(100px);
+            animation:solarsystem 10s infinite linear;
+        }
+        .venus{
+            --moveX:250px;
+            width: 30px;
+            height: 30px;;
+            background-color: red;
+            border-radius: 50%;
+            position: absolute;
+            margin-top: 300px;
+            margin-left: 40%;   
+            transform: translate(150px);
+            animation:solarsystem 7s infinite linear;
+        }
+        .earth{
+            --moveX:200px;
+            width: 50px;
+            height: 50px;;
+            background-color: skyblue;
+            border-radius: 50%;
+            position: absolute;
+            margin-top: 300px;
+            margin-left: 40%;   
+            transform: translate(200px);
+            animation:solarsystem 3s infinite linear;
+        }
+        .mars{
+            --moveX:300px;
+            width: 20px;
+            height: 20px;;
+            background-color: rgb(21, 187, 30);
+            border-radius: 50%;
+            position: absolute;
+            margin-top: 300px;
+            margin-left: 40%;   
+            transform: translate(280px);
+            animation:solarsystem 4s infinite linear;
+        }
+        @keyframes solarsystem {
+            from{
+                transform: rotate(0deg) translate(var(--moveX))
+            }
+            to{
+                transform: rotate(360deg) translate(var(--moveX))
+            }
+        }
+        .star{
+            width: 3px;
+            height: 3px;
+            border-radius: 20%;
+            background-color: white;
+            border-radius: 50%;
+            
+        }
+      
+    </style>
+</head>
+<body>
+    <div class="sun"></div>
+    <div class="mercury"></div>
+    <div class="venus"></div>
+    <div class="earth"></div>
+    <div class="mars"></div>
+    
+</body>
+</html>
+<script>
+    //  let main=document.getElementById('main')
+    //  let div=document.createElement('div')
+    // for(let i=0;i<500;i++)
+    // {
+    //     let m=Math.round(Math.random()*100)
+    //     console.log(m)
+       
+    //     div.class="star";
+    //     div.style.margin=`${m}px` 
+    //     main.append(div)
+        
+    // }
+    
+</script>
